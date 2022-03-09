@@ -11,3 +11,8 @@ def return_string_length(x):
 def divide_by_two(x):
     for n in x:
         return n / 2
+
+
+def return_first_char(x):
+    for n in x:
+        return n[0]
