@@ -6,3 +6,8 @@ def increase_seven(x):
 def return_string_length(x):
     for n in x:
         return len(n)
+
+
+def divide_by_two(x):
+    for n in x:
+        return n / 2
