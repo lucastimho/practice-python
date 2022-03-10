@@ -45,3 +45,9 @@ def exclude_b(x):
     for n in x:
         if n[0] != "b":
             return n
+
+
+def odd_numbers(x):
+    for n in x:
+        if n % 2 != 0:
+            return n
