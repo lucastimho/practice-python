@@ -66,3 +66,10 @@ def smallest_number(x):
         if n < small:
             small = n
     return small
+
+
+def total_length(x):
+    length = 0
+    for n in x:
+        sum += len(n)
+    return length
