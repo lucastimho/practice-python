@@ -39,3 +39,9 @@ def less_than_ten(x):
     for n in x:
         if n < 10:
             return n
+
+
+def exclude_b(x):
+    for n in x:
+        if n[0] != "b":
+            return n
