@@ -21,3 +21,9 @@ def return_first_char(x):
 def stringify(x):
     for n in x:
         return str(n)
+
+
+def less_than_two(x):
+    for n in x:
+        if n % 2 == 0:
+            return n
