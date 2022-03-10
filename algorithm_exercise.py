@@ -58,3 +58,11 @@ def sum(x):
     for n in x:
         sum += n
     return sum
+
+
+def smallest_number(x):
+    small = x[0]
+    for n in x:
+        if n < small:
+            small = n
+    return small
