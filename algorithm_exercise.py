@@ -16,3 +16,8 @@ def divide_by_two(x):
 def return_first_char(x):
     for n in x:
         return n[0]
+
+
+def stringify(x):
+    for n in x:
+        return str(n)
