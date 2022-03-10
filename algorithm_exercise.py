@@ -51,3 +51,10 @@ def odd_numbers(x):
     for n in x:
         if n % 2 != 0:
             return n
+
+
+def sum(x):
+    sum = 0
+    for n in x:
+        sum += n
+    return sum
