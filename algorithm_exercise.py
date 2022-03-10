@@ -73,3 +73,11 @@ def total_length(x):
     for n in x:
         sum += len(n)
     return length
+
+
+def combine_strings(x):
+    text = ""
+    for s in x:
+        text += s + "-"
+    text.pop(len(text) - 1)
+    return text
