@@ -81,3 +81,11 @@ def combine_strings(x):
         text += s + "-"
     text.pop(len(text) - 1)
     return text
+
+
+def biggest_number(x):
+    max = x[0]
+    for n in x:
+        if n > max:
+            max = n
+    return max
