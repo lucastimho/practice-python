@@ -33,3 +33,9 @@ def less_than_four_char(x):
     for n in x:
         if len(n) < 4:
             return n
+
+
+def less_than_ten(x):
+    for n in x:
+        if n < 10:
+            return n
