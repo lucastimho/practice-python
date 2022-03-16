@@ -45,3 +45,18 @@ def display_game(game_list):
 
 
 display_game(game_list)
+
+
+def postion_choice():
+    choice = "wrong"
+
+    while choice not in ['0', '1', '2']:
+        choice = input("Pick a postion (0, 1, 2): ")
+
+        if choice not in ['0', '1', '2']:
+            print("Sorry invalid input.")
+
+    return int(choice)
+
+
+postion_choice()
