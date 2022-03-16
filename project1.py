@@ -59,16 +59,10 @@ def postion_choice():
     return int(choice)
 
 
-postion_choice()
-
-
 def replacement_choice(game_list, position):
     user_placement = input("Type a string to place at position: ")
     game_list[position] = user_placement
     return game_list
-
-
-replacement_choice(game_list, 1)
 
 
 def gameon_choice():
@@ -85,4 +79,11 @@ def gameon_choice():
         return False
 
 
-gameon_choice()
+game_on = True
+
+while game_on:
+    display_game(game_list)
+    position = postion_choice()
+    game_list = replacement_choice(game_list, position)
+    display_game[game_list]
+    game_on = gameon_choice()
