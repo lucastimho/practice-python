@@ -55,3 +55,26 @@ def player2_inputs():
             print("That is an invalid input! Try again. ")
         else:
             board[position] = player2
+
+
+def win_state():
+    if board[0] == board[1] and board[0] == board[2]:
+        return True
+    elif board[0] == board[4] and board[0] == board[8]:
+        return True
+    elif board[6] == board[4] and board[6] == board[2]:
+        return True
+    elif board[3] == board[4] and board[3] == board[5]:
+        return True
+    elif board[6] == board[7] and board[6] == board[8]:
+        return True
+    elif board[0] == board[3] and board[0] == board[6]:
+        return True
+    elif board[1] == board[4] and board[1] == board[7]:
+        return True
+    elif board[2] == board[5] and board[2] == board[8]:
+        return True
+    elif board[6] == board[7] and board[6] == board[8]:
+        return True
+    else:
+        return False
