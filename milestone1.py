@@ -30,9 +30,9 @@ def player():
         if player1 not in ['X', 'O']:
             print("I do not understand. pick either X or O")
     if player1 == 'X':
-        player2 = 'O'
+        player2 = player2 + 'O'
     else:
-        player2 = 'X'
+        player2 = player2 + 'X'
 
 
 def player1_inputs():
@@ -78,3 +78,16 @@ def win_state():
         return True
     else:
         return False
+
+
+def game():
+    player()
+    while win_state():
+        player1_inputs()
+        board_state()
+        player2_inputs()
+        board_state()
+    print("Tic-Tac-Toe!")
+
+
+game()
