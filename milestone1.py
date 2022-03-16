@@ -42,6 +42,8 @@ def player1_inputs():
             "Player 1, pick your position for your marker (1-9): ")
         if position not in range(1, 9):
             print("That is an invalid input! Try again. ")
+        else:
+            board[position] = player1
 
 
 def player2_inputs():
@@ -51,3 +53,5 @@ def player2_inputs():
             "Player 2, pick your position for your marker (1-9): ")
         if position not in range(1, 9):
             print("That is an invalid input! Try again. ")
+        else:
+            board[position] = player2
