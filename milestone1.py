@@ -1,7 +1,3 @@
-from secrets import choice
-from turtle import position
-
-
 print("Tic-Tac-Toe Game")
 print("Here's how the board is laid out.")
 print("7|8|9")
@@ -10,8 +6,6 @@ print("4|5|6")
 print("-----")
 print("1|2|3")
 
-player1 = ''
-player2 = ''
 board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
 
@@ -24,6 +18,8 @@ def board_state():
 
 
 def player():
+    player1 = ''
+    player2 = ''
     while player1 not in ['X', 'O']:
         player1 = input("Player 1, choose either X or O. ")
         player1 = str(player1)
@@ -33,6 +29,7 @@ def player():
         player2 = player2 + 'O'
     else:
         player2 = player2 + 'X'
+    return player1, player2
 
 
 def player1_inputs():
