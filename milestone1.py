@@ -1,0 +1,7 @@
+print("Tic-Tac-Toe Game")
+print("Here's how the board is laid out")
+print("7|8|9")
+print("-----")
+print("4|5|6")
+print("-----")
+print("1|2|3")
