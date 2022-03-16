@@ -1,4 +1,5 @@
 from secrets import choice
+from turtle import position
 
 
 print("Tic-Tac-Toe Game")
@@ -18,11 +19,26 @@ def player():
         player1 = input("Player 1, choose either X or O. ")
         player1 = str(player1)
         if player1 not in ['X', 'O']:
-            print("I do not understand. Please pick either X or O")
-    return player1
+            print("I do not understand. pick either X or O")
+    if player1 == 'X':
+        player2 = 'O'
+    else:
+        player2 = 'X'
 
 
-if player1 == 'X':
-    player2 = 'O'
-else:
-    player2 = 'X'
+def player1_inputs():
+    position = "no"
+    while position not in range(1, 9):
+        position = input(
+            "Player 1, pick your position for your marker (1-9): ")
+        if position not in range(1, 9):
+            print("That is an invalid input! Try again. ")
+
+
+def player2_inputs():
+    position = "no"
+    while position not in range(1, 9):
+        position = input(
+            "Player 2, pick your position for your marker (1-9): ")
+        if position not in range(1, 9):
+            print("That is an invalid input! Try again. ")
