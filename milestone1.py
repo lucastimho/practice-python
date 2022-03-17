@@ -32,26 +32,26 @@ def player():
 
 def player1_inputs():
     position = "no"
-    while position not in range(9):
+    while position not in [1, 2, 3, 4, 5, 6, 7, 8, 9]:
         position = input(
             "Player 1, pick your position for your marker (1-9): ")
         position = int(position)
-        if position not in range(1, 9):
+        if position not in [1, 2, 3, 4, 5, 6, 7, 8, 9]:
             print("That is an invalid input! Try again. ")
         else:
-            board[position] = player1
+            board[position - 1] = player1
 
 
 def player2_inputs():
     position = "no"
-    while position not in range(9):
+    while position not in [1, 2, 3, 4, 5, 6, 7, 8, 9]:
         position = input(
             "Player 2, pick your position for your marker (1-9): ")
         position = int(position)
-        if position not in range(1, 9):
+        if position not in [1, 2, 3, 4, 5, 6, 7, 8, 9]:
             print("That is an invalid input! Try again. ")
         else:
-            board[position] = player2
+            board[position - 1] = player2
 
 
 def win_state():
