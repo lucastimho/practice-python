@@ -4,14 +4,16 @@ mylist = [1, 2, 3]
 class Dog():
     species = "mammal"
 
-    def __init__(self, breed, name, spots):
+    def __init__(self, breed, name):
         self.breed = breed
         self.name = name
-        self.spots = spots
+
+    def bark(self):
+        print("Woof!")
 
 
-my_dog = Dog(breed="lab", name="Sammy", spots=False)
+my_dog = Dog("lab", "Sammy")
 print(my_dog.species)
 print(my_dog.breed)
 print(my_dog.name)
-print(my_dog.spots)
+my_dog.bark
