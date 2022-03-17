@@ -93,10 +93,12 @@ while player1 not in ['X', 'O']:
 
 def game():
     while win_state():
-        player1_inputs()
-        board_state()
-        player2_inputs()
-        board_state()
+        if win_state():
+            player1_inputs()
+            board_state()
+        if win_state():
+            player2_inputs()
+            board_state()
     print("Tic-Tac-Toe!")
 
 
