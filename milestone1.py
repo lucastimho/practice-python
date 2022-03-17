@@ -17,13 +17,7 @@ def board_state():
     print(board[0]+"|"+board[1]+"|"+board[2])
 
 
-player = ''
-player = ''
-
-
 def player():
-    player1 = ''
-    player2 = ''
     while player1 not in ['X', 'O']:
         player1 = input("Player 1, choose either X or O. ")
         player1 = str(player1)
@@ -41,6 +35,7 @@ def player1_inputs():
     while position not in range(9):
         position = input(
             "Player 1, pick your position for your marker (1-9): ")
+        position = int(position)
         if position not in range(1, 9):
             print("That is an invalid input! Try again. ")
         else:
@@ -52,6 +47,7 @@ def player2_inputs():
     while position not in range(9):
         position = input(
             "Player 2, pick your position for your marker (1-9): ")
+        position = int(position)
         if position not in range(1, 9):
             print("That is an invalid input! Try again. ")
         else:
@@ -81,8 +77,21 @@ def win_state():
         return True
 
 
+player1 = ''
+player2 = ''
+
+while player1 not in ['X', 'O']:
+    player1 = input("Player 1, choose either X or O. ")
+    player1 = str(player1)
+    if player1 not in ['X', 'O']:
+        print("I do not understand. pick either X or O")
+    if player1 == 'X':
+        player2 = player2 + 'O'
+    else:
+        player2 = player2 + 'X'
+
+
 def game():
-    player()
     while win_state():
         player1_inputs()
         board_state()
