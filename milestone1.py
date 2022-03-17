@@ -17,6 +17,10 @@ def board_state():
     print(board[0]+"|"+board[1]+"|"+board[2])
 
 
+player = ''
+player = ''
+
+
 def player():
     player1 = ''
     player2 = ''
@@ -34,7 +38,7 @@ def player():
 
 def player1_inputs():
     position = "no"
-    while position not in range(1, 9):
+    while position not in range(9):
         position = input(
             "Player 1, pick your position for your marker (1-9): ")
         if position not in range(1, 9):
@@ -45,7 +49,7 @@ def player1_inputs():
 
 def player2_inputs():
     position = "no"
-    while position not in range(1, 9):
+    while position not in range(9):
         position = input(
             "Player 2, pick your position for your marker (1-9): ")
         if position not in range(1, 9):
@@ -56,25 +60,25 @@ def player2_inputs():
 
 def win_state():
     if board[0] == board[1] and board[0] == board[2] and board[0] != ' ':
-        return True
-    elif board[0] == board[4] and board[0] == board[8] and board[0] != ' ':
-        return True
-    elif board[6] == board[4] and board[6] == board[2] and board[6] != ' ':
-        return True
-    elif board[3] == board[4] and board[3] == board[5] and board[3] != ' ':
-        return True
-    elif board[6] == board[7] and board[6] == board[8] and board[6] != ' ':
-        return True
-    elif board[0] == board[3] and board[0] == board[6] and board[0] != ' ':
-        return True
-    elif board[1] == board[4] and board[1] == board[7] and board[1] != ' ':
-        return True
-    elif board[2] == board[5] and board[2] == board[8] and board[2] != ' ':
-        return True
-    elif board[6] == board[7] and board[6] == board[8] and board[6] != ' ':
-        return True
-    else:
         return False
+    elif board[0] == board[4] and board[0] == board[8] and board[0] != ' ':
+        return False
+    elif board[6] == board[4] and board[6] == board[2] and board[6] != ' ':
+        return False
+    elif board[3] == board[4] and board[3] == board[5] and board[3] != ' ':
+        return False
+    elif board[6] == board[7] and board[6] == board[8] and board[6] != ' ':
+        return False
+    elif board[0] == board[3] and board[0] == board[6] and board[0] != ' ':
+        return False
+    elif board[1] == board[4] and board[1] == board[7] and board[1] != ' ':
+        return False
+    elif board[2] == board[5] and board[2] == board[8] and board[2] != ' ':
+        return False
+    elif board[6] == board[7] and board[6] == board[8] and board[6] != ' ':
+        return False
+    else:
+        return True
 
 
 def game():
