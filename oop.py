@@ -22,8 +22,12 @@ my_dog.bark(3)
 class Circle():
     pi = 3.14
 
-    def __init__(self, radius):
+    def __init__(self, radius=1):
         self.radius = radius
 
     def get_circumference(self):
         return 2 * self.pi * self.radius
+
+
+my_circle = Circle(30)
+print(my_circle.radius)
