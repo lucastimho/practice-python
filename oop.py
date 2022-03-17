@@ -17,3 +17,13 @@ print(my_dog.species)
 print(my_dog.breed)
 print(my_dog.name)
 my_dog.bark(3)
+
+
+class Circle():
+    pi = 3.14
+
+    def __init__(self, radius):
+        self.radius = radius
+
+    def get_circumference(self):
+        return 2 * self.pi * self.radius
