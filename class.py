@@ -38,3 +38,15 @@ class Cat():
 
     def speak(self):
         return self.name + " says meow."
+
+
+niko = Dog("Niko")
+felix = Cat("Felix")
+print(niko.speak())
+
+
+def pet_speak(pet):
+    print(pet.speak())
+
+
+pet_speak(felix)
