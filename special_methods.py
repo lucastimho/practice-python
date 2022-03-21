@@ -11,6 +11,10 @@ class Book():
     def __str__(self):
         return f"{self.title} by {self.author}"
 
+    def __len__(self):
+        return self.pages
+
 
 b = Book("Python", "San Jose", 200)
 print(b)
+print(len(b))
