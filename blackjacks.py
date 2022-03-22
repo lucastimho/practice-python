@@ -11,13 +11,23 @@ class Deck():
 
 
 class Dealer(Deck):
+    rand1 = random.randint(0, 13)
+    rand2 = random.randint(0, 13)
+
     def __init__(self):
-        rand1 = random.randint(0, 13)
-        self.down = Deck.deck[rand1]
-        self.downname = Deck.card[rand1]
-        rand2 = random.randint(0, 13)
-        self.up = Deck.deck[rand2]
-        self.upname = Deck.card[rand2]
+        self.down = Deck.deck[Dealer.rand1]
+        self.downname = Deck.card[Dealer.rand1]
+        self.up = Deck.deck[Dealer.rand2]
+        self.upname = Deck.card[Dealer.rand2]
+
+
+class Player(Deck):
+    rand1 = random.randint(0, 13)
+    rand2 = random.randint(0, 13)
+
+    def __init__(self):
+        self.card1 = Deck.deck[Player.rand1]
+        self.card2 = Deck.deck[Player.rand2]
 
 
 dealer = Dealer()
