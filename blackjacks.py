@@ -9,6 +9,14 @@ class Deck():
     def __init__(self):
         pass
 
+    def hit(self):
+        raise NotImplementedError(
+            "Subclass must implement this abstract method.")
+
+    def hold(self):
+        raise NotImplementedError(
+            "Subclass must implement this abstract method.")
+
 
 class Dealer(Deck):
     rand1 = random.randint(0, 13)
@@ -20,6 +28,9 @@ class Dealer(Deck):
         self.up = Deck.deck[Dealer.rand2]
         self.upname = Deck.card[Dealer.rand2]
 
+    def display(self):
+        print("Dealer's hand contains a(n) " + self.upname)
+
 
 class Player(Deck):
     rand1 = random.randint(0, 13)
@@ -27,7 +38,9 @@ class Player(Deck):
 
     def __init__(self):
         self.card1 = Deck.deck[Player.rand1]
+        self.card1name = Deck.card[Player.rand1]
         self.card2 = Deck.deck[Player.rand2]
+        self.card2name = Deck.card[Player.rand2]
 
 
 dealer = Dealer()
