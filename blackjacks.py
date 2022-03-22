@@ -42,6 +42,10 @@ class Player(Deck):
         self.card2 = Deck.deck[Player.rand2]
         self.card2name = Deck.card[Player.rand2]
 
+    def display(self):
+        print("Your hand has a(n) " + self.card1name +
+              " and a(n) " + self.card2name)
+
 
 dealer = Dealer()
 print(dealer.down)
