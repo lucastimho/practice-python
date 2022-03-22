@@ -27,9 +27,14 @@ class Dealer(Deck):
         self.downname = Deck.card[Dealer.rand1]
         self.up = Deck.deck[Dealer.rand2]
         self.upname = Deck.card[Dealer.rand2]
+        self.hand = self.down + self.up
 
     def display(self):
-        print("Dealer's hand contains a(n) " + self.upname)
+        print("Dealer's hand contains a(n) " + self.upname + ".")
+
+    def hit(self):
+        self.hand = self.hand + Deck.deck[random.randint(0, 13)]
+        print("Dealer has " + str(self.hand) + ".")
 
 
 class Player(Deck):
@@ -41,10 +46,15 @@ class Player(Deck):
         self.card1name = Deck.card[Player.rand1]
         self.card2 = Deck.deck[Player.rand2]
         self.card2name = Deck.card[Player.rand2]
+        self.hand = self.card1 + self.card2
 
     def display(self):
         print("Your hand has a(n) " + self.card1name +
-              " and a(n) " + self.card2name)
+              " and a(n) " + self.card2name + ".")
+
+    def hit(self):
+        self.hand = self.hand + Deck.deck[random.randint(0, 13)]
+        print("Player has " + str(self.hand) + ".")
 
 
 dealer = Dealer()
