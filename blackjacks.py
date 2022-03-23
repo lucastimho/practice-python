@@ -65,9 +65,14 @@ class Player(Deck):
 
     def wager(self, bet):
         self.bet = bet
+        self.balance = self.balance - self.bet
 
 
-dealer = Dealer()
-player = Player(300)
-dealer.display()
-player.display()
+def game():
+    dealer = Dealer()
+    player = Player(300)
+    dealer.display()
+    player.display()
+
+
+game()
