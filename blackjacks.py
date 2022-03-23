@@ -41,12 +41,13 @@ class Player(Deck):
     rand1 = random.randint(0, 12)
     rand2 = random.randint(0, 12)
 
-    def __init__(self):
+    def __init__(self, balance):
         self.card1 = Deck.deck[Player.rand1]
         self.card1name = Deck.card[Player.rand1]
         self.card2 = Deck.deck[Player.rand2]
         self.card2name = Deck.card[Player.rand2]
         self.hand = self.card1 + self.card2
+        self.balance = balance
 
     def display(self):
         print("Your hand has a(n) " + self.card1name +
@@ -56,7 +57,11 @@ class Player(Deck):
         self.hand = self.hand + Deck.deck[random.randint(0, 12)]
         print("Player has " + str(self.hand) + ".")
 
+    def wager(self, bet):
+        self.bet = bet
+
 
 dealer = Dealer()
-print(dealer.down)
-print(dealer.downname)
+player = Player(300)
+dealer.display()
+player.display()
