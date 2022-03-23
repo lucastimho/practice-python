@@ -36,6 +36,9 @@ class Dealer(Deck):
         self.hand = self.hand + Deck.deck[random.randint(0, 12)]
         print("Dealer has " + str(self.hand) + ".")
 
+    def hold(self):
+        print("Dealer will stand at " + str(self.hand) + ".")
+
 
 class Player(Deck):
     rand1 = random.randint(0, 12)
@@ -56,6 +59,9 @@ class Player(Deck):
     def hit(self):
         self.hand = self.hand + Deck.deck[random.randint(0, 12)]
         print("Player has " + str(self.hand) + ".")
+
+    def hold(self):
+        print("Player will stand at " + str(self.hand) + ".")
 
     def wager(self, bet):
         self.bet = bet
