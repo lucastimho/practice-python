@@ -19,14 +19,12 @@ class Deck():
 
 
 class Dealer(Deck):
-    rand1 = random.randint(0, 12)
-    rand2 = random.randint(0, 12)
 
     def __init__(self):
-        self.down = Deck.deck[Dealer.rand1]
-        self.downname = Deck.card[Dealer.rand1]
-        self.up = Deck.deck[Dealer.rand2]
-        self.upname = Deck.card[Dealer.rand2]
+        self.down = Deck.deck[random.randint(0, 12)]
+        self.downname = Deck.card[random.randint(0, 12)]
+        self.up = Deck.deck[random.randint(0, 12)]
+        self.upname = Deck.card[random.randint(0, 12)]
         self.hand = self.down + self.up
 
     def display(self):
@@ -41,20 +39,20 @@ class Dealer(Deck):
 
 
 class Player(Deck):
-    rand1 = random.randint(0, 12)
-    rand2 = random.randint(0, 12)
 
-    def __init__(self, balance):
-        self.card1 = Deck.deck[Player.rand1]
-        self.card1name = Deck.card[Player.rand1]
-        self.card2 = Deck.deck[Player.rand2]
-        self.card2name = Deck.card[Player.rand2]
+    def __init__(self):
+        self.card1 = Deck.deck[random.randint(0, 12)]
+        self.card1name = Deck.card[random.randint(0, 12)]
+        self.card2 = Deck.deck[random.randint(0, 12)]
+        self.card2name = Deck.card[random.randint(0, 12)]
         self.hand = self.card1 + self.card2
-        self.balance = balance
 
     def display(self):
         print("Your hand has a(n) " + self.card1name +
               " and a(n) " + self.card2name + ".")
+
+    def balance(self, balance):
+        self.balance = balance
 
     def hit(self):
         self.hand = self.hand + Deck.deck[random.randint(0, 12)]
@@ -70,9 +68,15 @@ class Player(Deck):
 
 def game():
     dealer = Dealer()
-    player = Player(300)
+    player = Player()
+
     dealer.display()
     player.display()
 
 
-game()
+cont = True
+while cont:
+    game()
+    play = input("Would you like to play again? (y/n)")
+    if str(play) == "n":
+        cont = False
