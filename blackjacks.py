@@ -87,12 +87,27 @@ def game():
     player.display()
 
 
+def betting():
+    money = True
+    while money:
+        wager = input("How much you want to wager?")
+        if wager.isdigit():
+            player.wager(int(wager))
+            responses = ["Ooh daring today aren't we?", "If you think you can handle that much.",
+                         "Thanks (for the money)!", "When you going to start playing with the big boys?", "I've given my kid more money than that for chores.", "I don't condone taking kids' lunch money but I guess that changes now.", "Looks like another sucker I'm sending into debt."]
+            print(responses[random.randint(0, 6)])
+            money = False
+        else:
+            print("How about you put in some real numbers before I kick you out.")
+
+
 convert_to_chips()
 cont = True
 while cont:
     game()
     play = input("Would you like to play again? (y/n)")
     if str(play) == "n":
+        print("Thanks for your money. Hope to see you again!")
         cont = False
     else:
         print("Putting random letters is not going to get your money back.")
