@@ -20,5 +20,14 @@ def hello(name="Jose"):
         return welcome
 
 
+def cool():
+    def super_cool():
+        return "I am very cool!"
+    return super_cool
+
+
+some_func = cool()
+
 my_new_func = hello("Jose")
 print(my_new_func())
+print(some_func())
