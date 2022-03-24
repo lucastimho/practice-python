@@ -69,6 +69,14 @@ class Player(Deck):
 def game():
     dealer = Dealer()
     player = Player()
+    money = True
+    while money:
+        balance = input("How much money would you like to put in to chips?")
+        if balance.isdigit():
+            player.balance(int(balance))
+            money = False
+        else:
+            print("That is not a valid number.")
 
     dealer.display()
     player.display()
