@@ -3,8 +3,8 @@ import random
 
 class Deck():
     deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11]
-    card = ["two", "three", "four", "five", "six", "seven",
-            "eight", "nine", "ten", "jack", "queen", "king", "ace"]
+    # card = ["two", "three", "four", "five", "six", "seven",
+    #         "eight", "nine", "ten", "jack", "queen", "king", "ace"]
 
     def __init__(self):
         pass
@@ -22,13 +22,13 @@ class Dealer(Deck):
 
     def __init__(self):
         self.down = Deck.deck[random.randint(1, 13)]
-        self.downname = Deck.card[random.randint(0, 12)]
+        # self.downname = Deck.card[random.randint(0, 12)]
         self.up = Deck.deck[random.randint(1, 13)]
-        self.upname = Deck.card[random.randint(0, 12)]
+        # self.upname = Deck.card[random.randint(0, 12)]
         self.hand = self.down + self.up
 
     def display(self):
-        print("Dealer's hand contains a(n) " + self.upname + ".")
+        print("Dealer's hand has least a value of " + str(self.upname) + ".")
 
     def hit(self):
         self.hand = self.hand + Deck.deck[random.randint(1, 13)]
@@ -42,14 +42,13 @@ class Player(Deck):
 
     def __init__(self):
         self.card1 = Deck.deck[random.randint(1, 13)]
-        self.card1name = Deck.card[random.randint(0, 12)]
+        # self.card1name = Deck.card[random.randint(0, 12)]
         self.card2 = Deck.deck[random.randint(1, 13)]
-        self.card2name = Deck.card[random.randint(0, 12)]
+        # self.card2name = Deck.card[random.randint(0, 12)]
         self.hand = self.card1 + self.card2
 
     def display(self):
-        print("Your hand has a(n) " + self.card1name +
-              " and a(n) " + self.card2name + ".")
+        print("Your hand has " + str(self.card1 + self.card2) + ".")
 
     def balance(self, balance):
         self.balance = balance
