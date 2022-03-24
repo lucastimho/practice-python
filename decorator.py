@@ -41,6 +41,8 @@ def other(some_def_func):
 print(hello())
 print(other(hello))
 
+# main takeaways for setting up decorated functions
+
 
 def new_decorator(original_func):
     def wrap_func():
@@ -61,6 +63,8 @@ func_needs_decorator()
 
 decorated_func = new_decorator(func_needs_decorator)
 decorated_func()
+
+# on and off switch
 
 
 @new_decorator
