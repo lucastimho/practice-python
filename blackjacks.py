@@ -66,9 +66,11 @@ class Player(Deck):
         self.balance = self.balance - self.bet
 
 
-def game():
-    dealer = Dealer()
-    player = Player()
+dealer = Dealer()
+player = Player()
+
+
+def convert_to_chips():
     money = True
     while money:
         balance = input("How much money would you like to put in to chips?")
@@ -76,15 +78,21 @@ def game():
             player.balance(int(balance))
             money = False
         else:
-            print("That is not a valid number.")
+            print("Please go back to elementary school to learn what numbers are.")
 
+
+def game():
+    print("Your balance is $" + str(player.balance) + ".")
     dealer.display()
     player.display()
 
 
+convert_to_chips()
 cont = True
 while cont:
     game()
     play = input("Would you like to play again? (y/n)")
     if str(play) == "n":
         cont = False
+    else:
+        print("Putting random letters is not going to get your money back.")
