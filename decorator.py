@@ -1,7 +1,3 @@
-def func():
-    return 1
-
-
 def hello(name="Jose"):
     print("The hello() function has been executed!")
 
@@ -29,5 +25,18 @@ def cool():
 some_func = cool()
 
 my_new_func = hello("Jose")
-print(my_new_func())
-print(some_func())
+# print(my_new_func())
+# print(some_func())
+
+
+def hello():
+    return "Hi Jose!"
+
+
+def other(some_def_func):
+    print("Other code runs here!")
+    print(some_def_func())
+
+
+print(hello())
+print(other(hello))
