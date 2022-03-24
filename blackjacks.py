@@ -28,7 +28,7 @@ class Dealer(Deck):
         self.hand = self.down + self.up
 
     def display(self):
-        print("Dealer's hand has least a value of " + str(self.upname) + ".")
+        print("Dealer's hand has at least a value of " + str(self.up) + ".")
 
     def hit(self):
         self.hand = self.hand + Deck.deck[random.randint(1, 13)]
@@ -103,7 +103,6 @@ def betting():
 convert_to_chips()
 cont = True
 while cont:
-    game()
     if player.balance > 0:
         betting()
     else:
@@ -113,10 +112,13 @@ while cont:
         else:
             print("Okay we're done here.")
             break
+    game()
     while cont:
         play = input("Would you like to play again? (y/n)")
         if str(play) == "n":
             print("Thanks for your money. Hope to see you again!")
             cont = False
+        elif str(play) == "y":
+            break
         else:
             print("Putting random letters is not going to get your money back.")
