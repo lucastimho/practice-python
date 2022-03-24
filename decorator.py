@@ -14,6 +14,11 @@ def hello(name="Jose"):
     print(greet())
     print(welcome())
     print("This is the end of the hello function!")
+    if name == "Jose":
+        return greet
+    else:
+        return welcome
 
 
-hello()
+my_new_func = hello("Jose")
+print(my_new_func())
