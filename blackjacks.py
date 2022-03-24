@@ -100,6 +100,18 @@ def betting():
             print("How about you put in a realistic number before I kick you out.")
 
 
+def playing():
+    if player.card1 + player.card2 == 21:
+        print("BlackJack")
+        player.balance = player.balance + player.wager * 2.5
+    elif player.hand < 21:
+        play = True
+        while play:
+            hit = input("Would you like to hit? (y/n)")
+            if hit == "y":
+                player.hit()
+
+
 convert_to_chips()
 cont = True
 while cont:
