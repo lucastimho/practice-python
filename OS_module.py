@@ -8,3 +8,6 @@ pwd
 # f.close()
 path = os.getcwd()
 print(path)
+list = os.listdir(path)
+for p in list:
+  print(p)
