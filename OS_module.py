@@ -1,6 +1,10 @@
 import pwd
+import os
 
 pwd
-f = open("practice.txt", "w+")
-f.write("This is a test string")
-f.close()
+# Opens, writes, and close txt file
+# f = open("practice.txt", "w+")
+# f.write("This is a test string")
+# f.close()
+path = os.getcwd()
+print(path)
