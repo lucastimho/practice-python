@@ -1,5 +1,6 @@
 import pwd
 import os
+# import shutil
 
 pwd
 # Opens, writes, and close txt file
@@ -11,3 +12,4 @@ print(path)
 list = os.listdir(path)
 for p in list:
   print(p)
+# shutil.move('practice.txt', '/Users/lucasho/Acutalize')
