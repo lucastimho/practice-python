@@ -19,3 +19,8 @@ random.choice(mylist)
 random.choices(population=mylist, k=10)
 # sample without replacement
 random.sample(population=mylist, k=10)
+random.shuffle(mylist)
+# uniform distribution
+random.uniform(a=0, b=100)
+# gaussian distribution
+random.gauss(mu=0, sigma=1)
