@@ -13,3 +13,9 @@ math.degrees(math.pi/2)
 math.radians(180)
 random.seed(101)
 random.randint(0,100)
+mylist = list(range(0, 20))
+# sample with replacement
+random.choice(mylist)
+random.choices(population=mylist, k=10)
+# sample without replacement
+random.sample(population=mylist, k=10)
