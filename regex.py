@@ -17,3 +17,7 @@ matches = re.findall(pattern, text)
 print(matches)
 for match in re.finditer(pattern, text):
   print(match.span())
+text = "My phone number is 870-555-1234"
+phone = re.search("\d\d\d-\d\d\d-\d\d\d\d", text)
+print(phone.span())
+print(phone.group())
