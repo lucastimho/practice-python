@@ -18,6 +18,10 @@ print(matches)
 for match in re.finditer(pattern, text):
   print(match.span())
 text = "My phone number is 870-555-1234"
-phone = re.search("\d\d\d-\d\d\d-\d\d\d\d", text)
+phone = re.search("\d{3}-\d{3}-\d{4}", text)
 print(phone.span())
 print(phone.group())
+phone_pattern = re.compile("(\d{3})-(\d{3})-(\d{4})")
+results = re.search(phone_pattern, text)
+print(results.group())
+print(results.group(2))
